@@ -1,0 +1,26 @@
+<view>
+  <swiper indicator-dots="true" autoplay="true">
+    <swiper-item>
+      <image src="/images/wx.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/vr.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/iqiyi.png"></image>
+    </swiper-item>
+  </swiper>
+  <view>
+    <view>
+        <image src="/images/avatar/1.png"></image>
+        <text>Nov 25 2016</text>
+    </view>
+    <text></text>
+    <view>
+        <image src="src"></image>
+        <text></text>
+        <image src="src"></image>
+        <text></text>
+    </view>
+  </view>
+</view>
