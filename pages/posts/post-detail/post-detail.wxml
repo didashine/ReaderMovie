@@ -1,0 +1,22 @@
+
+<!--先静后动，先样式再数据-->
+<view class="container">
+  <image class="head-image" src="{{postKey.headImgSrc}}"></image>
+  <image class="audio" src="/images/music/music-start.png"></image>
+  <view class="author-date">
+    <image class="avatar" src="{{postKey.avatar}}"></image>
+    <text class="author">{{postKey.author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{postKey.dateTime}}</text>
+  </view>
+  <text class="title">{{postKey.title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <image wx:if="{{collected}}" catchtap="onCollectionTap" src="/images/icon/collection.png"></image>
+      <image wx:else catchtap="onCollectionTap" src="/images/icon/collection-anti.png"></image>
+      <image catchtap="onShareTap" class="share-img" src="/images/icon/share.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{postKey.detail}}</text>
+</view>
