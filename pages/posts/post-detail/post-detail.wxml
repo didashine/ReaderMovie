@@ -2,7 +2,7 @@
 <!--先静后动，先样式再数据-->
 <view class="container">
   <image class="head-image" src="{{postKey.headImgSrc}}"></image>
-  <image class="audio" src="/images/music/music-start.png"></image>
+  <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
   <view class="author-date">
     <image class="avatar" src="{{postKey.avatar}}"></image>
     <text class="author">{{postKey.author}}</text>
