@@ -12,7 +12,13 @@ Page({
     onPostTap(event) {
         var postId = event.currentTarget.dataset.postid;   //6-1
         wx.navigateTo({
-            url:'post-detail/post-detail?id='+postId
+            url: 'post-detail/post-detail?id=' + postId
+        })
+    },
+    onSwiperTap(event) {
+        var postId = event.target.dataset.postid;   //6-1
+        wx.navigateTo({
+            url: 'post-detail/post-detail?id=' + postId
         })
     }
 })

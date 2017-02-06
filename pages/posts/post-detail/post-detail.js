@@ -22,7 +22,7 @@ Page({
             postsCollected[postId] = false;
             wx.setStorageSync('posts_collected', postsCollected);
         }
-        if (app.globalData.g_isplayingmusic) {
+        if (app.globalData.g_isplayingmusic && app.globalData.g_currentMusicPostId === this.data.id) {
             this.setData({
                 isPlayingMusic: true
             })
@@ -81,12 +81,14 @@ Page({
                 isPlayingMusic: true
             })
         app.globalData.g_isplayingmusic = true
+        app.globalData.g_currentMusicPostId = that.data.id
         })
         wx.onBackgroundAudioPause(function () {
             that.setData({
                 isPlayingMusic: false
             })
         app.globalData.g_isplayingmusic = false
+        app.globalData.g_currentMusicPostId = null
         })
     }
 })
